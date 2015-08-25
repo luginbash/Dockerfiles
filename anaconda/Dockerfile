@@ -1,13 +1,13 @@
 FROM debian:wheezy
 MAINTAINER Quan Zhou "public_zhou@outlook.com"
 
-ENV ANACONDA_VERSION=2.1.0-Linux-x86_64
+ENV ANACONDA_VERSION=2.3.0-Linux-x86_64
 
 RUN apt-get update && \
     apt-get install -y axel bzip2 openssl && \
     rm -rf /var/lib/apt/lists/*
 
-RUN axel -n5 -a http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/Anaconda-$ANACONDA_VERSION.sh && \
+RUN axel -n5 -a http://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda-$ANACONDA_VERSION.sh && \
     bash  Anaconda-$ANACONDA_VERSION.sh -b && \
     rm Anaconda-$ANACONDA_VERSION.sh
 
