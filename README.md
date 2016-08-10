@@ -1,2 +1,2 @@
 # Dockerfiles
-My trip with docker
+My trip to the dock
